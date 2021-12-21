@@ -1,0 +1,11 @@
+What are we creating?
+A web server with the main motive to provide the weather of any location. The server will show output using a webpage. The backend is built using nodeJS
+
+Why are we creating?
+To build a web server serving weather.
+
+How are we building it?
+src/app.js is executed to turn on the web server. It serves many pages i.e., about, help, weather (only accessible manually using url and mainly used to serve the forecast in json form to the js being run from the index).
+Only weather and index are of concern to us. We provide the address (for which we need the forecast to the box on index) to a box in index. This data from the box is then accessed by the js script run from the index. That
+js script then fetches the data from /weather where address is provided as a parameter (http://localhost:3000/weather?address=jaipur, Note: ? used to specify query). This web page returns the result in json format. This
+is then used by the js script and used to push the forecast to the index page using queryselector.
